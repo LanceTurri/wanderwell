@@ -1,4 +1,4 @@
-export const foo = async (): Promise<boolean> => {
+export const onStart = async (): Promise<boolean> => {
   setTimeout(() => {
     console.log('done');
   }, 1000);
