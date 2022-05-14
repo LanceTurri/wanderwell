@@ -5,10 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link href="./styles/index.css">
 </head>
 <body>
-  
-  <p>Open the devtools 👇</p>
+  <div class="app">
+    <header class="app__header header">
+      <h1 class="header__title">Wanderwell</h1>
+      <div class="header__actions">
+        <button class="header__actions-item">
+          list
+        </button>
+        <button class="header__actions-item">
+          icons
+        </button>
+      </div>
+    </header>
+
+    <div class="app__wrapper">
+      <aside class="sidebar"></aside>
+      <main class="main"></main>
+    </div>
+  </div>
   <script src="./dist/index.js"></script>
 </body>
 </html>

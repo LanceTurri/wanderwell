@@ -15,7 +15,9 @@
     "lint": "eslint src/ --ext .ts",
     "test": "jest",
     "clean": "rm -rf dist build package",
-    "ts-node": "ts-node",
+    "generate-listing": "ts-node helpers/generateFileListing.ts",
+    "scss": "sass src/styles:public/styles",
+    "scss:watch": "sass src/styles:public/styles --watch",
     "start": "npm run esbuild-browser:watch & npx http-server -o",
     "build": "tsc -p tsconfig.json",
     "build-all": "npm run clean && npm run build && npm run esbuild-browser",
@@ -33,6 +35,7 @@
     "http-server": "^14.1.0",
     "jest": "^26.6.3",
     "prettier": "^2.6.2",
+    "sass": "^1.51.0",
     "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
