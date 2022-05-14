@@ -51,8 +51,8 @@ typings/
 
 /build/
 /lib/
-/dist/
-public/dist/
+public/styles/
+public/scripts/
 /docs/
 .idea/*
 

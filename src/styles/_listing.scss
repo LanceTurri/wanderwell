@@ -8,17 +8,23 @@
 }
 
 .listing__group {
+  max-height: 100vh;
+  overflow: hidden;
   padding-left: 0;
+  transition: all var(--platform-animation-speed-base) ease-in-out;
   
   &:not(:first-child) {
     border-left: 2px solid var(--platform-grey-300);
     margin-left: var(--platform-spacing-base);
     padding-left: var(--platform-spacing-base);
   }
+
+  &--hidden {
+    max-height: 0;
+  }
 }
 
 .listing__item {
-  align-items: center;
   background-color: transparent;
   border-radius: var(--platform-spacing-xsmall);
   color: var(--platform-grey-100);
@@ -27,6 +33,7 @@
   font-size: var(--platform-text-size-small);
   font-weight: 500;
   letter-spacing: var(--platform-char-spacing);
+  margin-bottom: var(--platform-spacing-xsmall);
   overflow: hidden;
   padding: var(--platform-spacing-small);
   text-overflow: ellipsis;
