@@ -1,0 +1,8 @@
+.header__title {
+  color: var(--platform-grey-100);
+  margin: 0;
+  margin-bottom: var(--platform-spacing-small);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

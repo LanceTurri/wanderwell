@@ -1,32 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <link href="./styles/index.css">
-</head>
-<body>
-  <div class="app">
-    <header class="app__header header">
-      <h1 class="header__title">Wanderwell</h1>
-      <div class="header__actions">
-        <button class="header__actions-item">
-          list
-        </button>
-        <button class="header__actions-item">
-          icons
-        </button>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="app__wrapper">
+        <div class="listing">
+          <h1 class="header__title">Wanderwell</h1>
+          <aside class="listing__wrapper">
+            <ul class="listing__group">
+              <li class="listing__item">My Files</li>
+              <ul class="listing__group">
+                <li class="listing__item">Documents</li>
+                <li class="listing__item">Photos</li>
+                <li class="listing__item">Videos</li>
+              </ul>
+            </ul>
+          </aside>
+        </div>
+        <main class="explorer">
+          <header class="explorer__header">
+            <p>Breadcrumbs</p>
+            <h2>My Files</h2>
+          </header>
+          <div class="explorer__metadata">
+            <div class="explorer__metadata-item explorer__item--primary">
+              File Name
+            </div>
+            <div class="explorer__metadata-item explorer__item--secondary">
+              Modified
+            </div>
+            <div class="explorer__metadata-item explorer__item--secondary">
+              Size
+            </div>
+          </div>
+          <div class="explorer__listing">
+            <div class="explorer__listing-item explorer__listing-item--folder">
+              <div class="explorer__listing-title explorer__item--primary">
+                Documents
+              </div>
+              <div class="explorer__listing-subtitle explorer__item--secondary">
+                --
+              </div>
+              <div class="explorer__listing-subtitle explorer__item--secondary">
+                --
+              </div>
+            </div>
+            <div class="explorer__listing-item explorer__listing-item--folder">
+              <div class="explorer__listing-title explorer__item--primary">
+                Photos
+              </div>
+              <div class="explorer__listing-subtitle explorer__item--secondary">
+                Yesterday
+              </div>
+              <div class="explorer__listing-subtitle explorer__item--secondary">
+                128KB
+              </div>
+            </div>
+            <div class="explorer__listing-item explorer__listing-item--file">
+              <div class="explorer__listing-title explorer__item--primary">
+                Videos
+              </div>
+              <div class="explorer__listing-subtitle explorer__item--secondary">
+                Today
+              </div>
+              <div class="explorer__listing-subtitle explorer__item--secondary">
+                48KB
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
-    </header>
-
-    <div class="app__wrapper">
-      <aside class="sidebar"></aside>
-      <main class="main"></main>
     </div>
-  </div>
-  <script src="./dist/index.js"></script>
-</body>
+    <script src="./dist/index.js"></script>
+  </body>
 </html>

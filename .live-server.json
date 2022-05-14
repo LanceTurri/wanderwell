@@ -1,0 +1,8 @@
+{
+  "root": "/public",
+  "file": "index.html",
+  "entryFile": "index.html",
+  "cors": true,
+  "wait": 1000,
+  "watch": "/public"
+}
