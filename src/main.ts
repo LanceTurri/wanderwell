@@ -30,6 +30,7 @@ const _scaffoldFileTree = (fileListing: ITreeNode[]) => {
 const _scaffoldFileExplorer = (fileListing: ITreeNode[]) => {
   console.log('Generating file explorer');
   const fileExplorer = generateFileExplorer(fileListing);
+
   const fileExplorerElement = document
     .getElementById(kFileExplorerElementId)
     ?.querySelector('.explorer__listing') as HTMLDivElement;
@@ -37,6 +38,13 @@ const _scaffoldFileExplorer = (fileListing: ITreeNode[]) => {
   if (fileExplorerElement) {
     fileExplorerElement.replaceChildren(...fileExplorer);
   }
+};
+
+const _updateFolderTitle = (folderName: string) => {
+  const titleElement = document
+    .getElementById(kFileExplorerElementId)
+    ?.querySelector('.explorer__title') as HTMLHeadingElement;
+  titleElement.innerText = folderName;
 };
 
 const _createEventSubscriptions = (fileListing: ITreeNode[]) => {
@@ -49,6 +57,7 @@ const _createEventSubscriptions = (fileListing: ITreeNode[]) => {
       );
 
       if (treeNode) {
+        _updateFolderTitle(treeNode.name);
         _scaffoldFileExplorer(treeNode.children ?? []);
       }
     }

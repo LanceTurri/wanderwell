@@ -2,9 +2,18 @@
   background: linear-gradient(to bottom, var(--primary-100), var(--primary-200));
   background-color: var(--primary-200);
   max-width: 350px;
-  min-width: 200px;
+  min-width: 250px;
   padding: var(--platform-spacing-base);
   width: 30%;
+}
+
+.listing__title {
+  color: var(--platform-grey-100);
+  margin: 0;
+  margin-bottom: var(--platform-spacing-small);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .listing__group {
@@ -34,6 +43,7 @@
   font-weight: 500;
   letter-spacing: var(--platform-char-spacing);
   margin-bottom: var(--platform-spacing-xsmall);
+  min-width: 0;
   overflow: hidden;
   padding: var(--platform-spacing-small);
   text-overflow: ellipsis;

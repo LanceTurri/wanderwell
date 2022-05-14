@@ -9,7 +9,7 @@ const fileData = files.map((file) => {
   return {
     type: metadata.isDirectory() ? 'folder' : 'file',
     name: file.replace(basePath, ''),
-    modified: metadata.ctime.toJSON(),
+    modified: metadata.ctime.getTime(),
     size: metadata.size,
   };
 });
