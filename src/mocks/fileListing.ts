@@ -21,6 +21,74 @@ export const fileListing = `[
         "children": [
           {
             "type": "folder",
+            "name": "Some Nights",
+            "modified": 1652408476554,
+            "size": 0,
+            "children": [
+              {
+                "type": "file",
+                "name": "Some Nights (Intro).mp3",
+                "modified": 1590244187352,
+                "size": 6003179
+              },
+              {
+                "type": "file",
+                "name": "Some Nights.mp3",
+                "modified": 1590244187318,
+                "size": 11573530
+              },
+              {
+                "type": "file",
+                "name": "Carry On.mp3",
+                "modified": 1590244187332,
+                "size": 11626820
+              },
+              {
+                "type": "file",
+                "name": "It Gets Better.mp3",
+                "modified": 1590244187359,
+                "size": 9137873
+              },
+              {
+                "type": "file",
+                "name": "Why Am I The One.mp3",
+                "modified": 1590244187339,
+                "size": 11960142
+              },
+              {
+                "type": "file",
+                "name": "All Alone.mp3",
+                "modified": 1590244187345,
+                "size": 7843245
+              },
+              {
+                "type": "file",
+                "name": "All Alright.mp3",
+                "modified": 1590244187324,
+                "size": 9991555
+              },
+              {
+                "type": "file",
+                "name": "One Foot.mp3",
+                "modified": 1590244187311,
+                "size": 8969645
+              },
+              {
+                "type": "file",
+                "name": "Stars.mp3",
+                "modified": 1590244187305,
+                "size": 17025808
+              },
+              {
+                "type": "file",
+                "name": "Out On The Town.mp3",
+                "modified": 1590244187298,
+                "size": 10949726
+              }
+            ]
+          },
+          {
+            "type": "folder",
             "name": "Dark Side of the Moon",
             "modified": 1652408476554,
             "size": 0,

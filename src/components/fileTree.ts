@@ -53,10 +53,15 @@ const _createTreeGroup = (
 const _createTreeItem = (item: ITreeNode): HTMLLIElement => {
   const listingItem = document.createElement('li');
   listingItem.classList.add('listing__item');
-  listingItem.innerText = item.name;
   listingItem.setAttribute('data-item', underscorize(item.name));
   listingItem.setAttribute('data-name', item.name);
   listingItem.addEventListener('click', onFileTreeItemClickHandler);
+
+  const listingTextElement = document.createElement('span');
+  listingTextElement.classList.add('listing__item-text');
+  listingTextElement.innerText = item.name;
+
+  listingItem.appendChild(listingTextElement);
 
   return listingItem;
 };

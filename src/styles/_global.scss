@@ -7,7 +7,7 @@
 }
 
 * {
-  font-family: 'Lato', Helvetica, sans-serif;;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   color: #222222;
   line-height: 1.5;
 }
@@ -24,8 +24,4 @@ body {
 ol, ul {
   list-style: none;
   margin: 0;
-}
-
-.app {
-  height: 100%;
 }
