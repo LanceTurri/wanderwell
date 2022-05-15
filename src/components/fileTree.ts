@@ -1,12 +1,13 @@
-import { onFileTreeItemClickHandler } from '../handlers/onFileTreeItemClickHandler';
+import { onSelectFolderHandler } from '../handlers/onSelectFolderHandler';
+import { onExpandItemHandler } from '../handlers/onExpandItemHandler';
 import { underscorize } from '../utils/underscorize';
 
 // Generates a <ul> element for every group of children from the file listing
 //
 // Example HTML output:
-// <ul class="listing__group" data-folder="root">
-//   <li class="listing__item">My Files</li>
-//   <ul class="listing__group" data-folder="my_files">
+// <ul class="listing__group" data-group="root">
+//   <li class="listing__item" data-folder="my_files">My Files</li>
+//   <ul class="listing__group" data-group="my_files">
 //     <li class="listing__item">Documents</li>
 //     <li class="listing__item">Photos</li>
 //     <li class="listing__item">Videos</li>
@@ -27,7 +28,7 @@ const _createTreeGroup = (
 
   const wrappingElement = document.createElement('ul');
   wrappingElement.classList.add('listing__group');
-  wrappingElement.setAttribute('data-folder', underscorize(id));
+  wrappingElement.setAttribute('data-group', underscorize(id));
 
   if (isHidden) {
     wrappingElement.classList.add('listing__group--hidden');
@@ -53,9 +54,9 @@ const _createTreeGroup = (
 const _createTreeItem = (item: ITreeNode): HTMLLIElement => {
   const listingItem = document.createElement('li');
   listingItem.classList.add('listing__item');
-  listingItem.setAttribute('data-item', underscorize(item.name));
+  listingItem.setAttribute('data-folder', underscorize(item.name));
   listingItem.setAttribute('data-name', item.name);
-  listingItem.addEventListener('click', onFileTreeItemClickHandler);
+  listingItem.addEventListener('click', onSelectFolderHandler);
 
   const listingTextElement = document.createElement('span');
   listingTextElement.classList.add('listing__item-text');
@@ -63,7 +64,22 @@ const _createTreeItem = (item: ITreeNode): HTMLLIElement => {
 
   listingItem.appendChild(listingTextElement);
 
+  if (item.children && item.children.some((item) => item.type === 'folder')) {
+    listingItem.appendChild(_createExpandButton(item.name));
+  }
+
   return listingItem;
+};
+
+const _createExpandButton = (name: string): HTMLButtonElement => {
+  const listingExpandElement = document.createElement('button');
+  listingExpandElement.classList.add('listing__item-expand');
+  listingExpandElement.type = 'button';
+  listingExpandElement.innerText = '+';
+  listingExpandElement.setAttribute('data-folder', underscorize(name));
+  listingExpandElement.addEventListener('click', onExpandItemHandler);
+
+  return listingExpandElement;
 };
 
 export default generateFileTree;

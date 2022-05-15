@@ -1,4 +1,4 @@
-import { onExplorerItemClickHandler } from '../handlers/onExplorerItemClickHandler';
+import { onSelectFolderHandler } from '../handlers/onSelectFolderHandler';
 import { readableFileSize } from '../utils/readableFileSize';
 import { underscorize } from '../utils/underscorize';
 
@@ -41,7 +41,7 @@ const _createExplorerItem = (item: ITreeNode): HTMLDivElement => {
   // Right now only folders need the click event to select that folder
   // If a file details page is ever added, update this click handler to support it.
   if (item.type === 'folder') {
-    wrappingElement.addEventListener('click', onExplorerItemClickHandler);
+    wrappingElement.addEventListener('click', onSelectFolderHandler);
   }
 
   // Content Elements

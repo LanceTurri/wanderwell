@@ -1,8 +1,8 @@
-export const onExplorerItemClickHandler = (event: MouseEvent): void => {
+export const onSelectFolderHandler = (event: MouseEvent): void => {
   const element = event.currentTarget as HTMLDivElement;
 
   if (!element) {
-    console.log('FILE EXPLORER CLICK HANDLER: No element was found on event');
+    console.log('SELECTED CLICK HANDLER: No element was found on event');
     return;
   }
 
@@ -11,7 +11,7 @@ export const onExplorerItemClickHandler = (event: MouseEvent): void => {
 
   if (!folderName || !displayName) {
     console.log(
-      'FILE EXPLORER CLICK HANDLER: No folderName or displayName was found'
+      'SELECTED CLICK HANDLER: No folderName or displayName was found'
     );
     return;
   }
@@ -19,7 +19,6 @@ export const onExplorerItemClickHandler = (event: MouseEvent): void => {
   document.body.dispatchEvent(
     new CustomEvent<IFolderCustomEvent>('item--selected', {
       detail: {
-        source: 'file-explorer',
         identifier: folderName,
         displayName: displayName,
       },

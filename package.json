@@ -1,6 +1,6 @@
 {
   "name": "wanderwell",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "File Explorer interface in vanilla JavaScript",
   "author": "Lance Turri",
   "repository": "https://github.com/LanceTurri/wanderwell",
