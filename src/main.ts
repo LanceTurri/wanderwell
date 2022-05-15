@@ -1,11 +1,12 @@
-import getFileListing from './apis/getFileListing';
 import generateFileExplorer from './components/fileExplorer';
 import generateFileTree from './components/fileTree';
-import { selectItem } from './handlers/file-tree/selectItem';
-import { findTreeNode } from './utils/findTreeNode';
+import getFileListing from './apis/getFileListing';
 
-const kFileTreeElementId = 'file_tree';
+import { findTreeNode } from './utils/findTreeNode';
+import { selectItem } from './handlers/file-tree/selectItem';
+
 const kFileExplorerElementId = 'file_explorer';
+const kFileTreeElementId = 'file_tree';
 
 export const onReady = async (): Promise<void> => {
   console.log('Fetching file listing');

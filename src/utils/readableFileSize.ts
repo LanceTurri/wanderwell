@@ -1,3 +1,5 @@
+// Returns a human readable filesize from an input of bytes
+// Example: 1024 => 1kB
 export const readableFileSize = (bytes: number): string => {
   if (bytes === 0) {
     return '--';

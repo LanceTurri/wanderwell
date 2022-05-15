@@ -1,5 +1,7 @@
 import { readdirSync, statSync } from 'fs';
 
+// This is a simple script to return an ITreeNode[] based on a directory on the
+// local filesystem. This is very useful to generate mock data to work with.
 const basePath = '../../Pictures/__Desktops';
 
 const files = readdirSync(basePath);
