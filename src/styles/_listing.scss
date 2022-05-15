@@ -1,6 +1,7 @@
 .listing {
   background: linear-gradient(to bottom, var(--primary-100), var(--primary-200));
   background-color: var(--primary-200);
+  border-radius: 0 16px 16px 0;
   box-shadow: 3px 3px 6px #8f86e4, -3px -3px 6px #a59aff;
   max-width: 350px;
   min-width: 280px;
@@ -48,6 +49,7 @@
   margin: 0;
   margin-bottom: var(--platform-spacing-small);
   overflow: hidden;
+  padding-left: var(--platform-spacing-small);
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -114,6 +116,7 @@
   font-size: var(--platform-text-size-small);
   font-weight: 500;
   letter-spacing: var(--platform-char-spacing);
+  margin-right: var(--platform-spacing-xsmall);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -132,7 +135,6 @@
   justify-content: center;
   line-height: 1;
   margin: 0;
-  margin-left: 4px;
   padding: 9px;
   transition: all var(--platform-animation-speed-base) linear;
   width: 1.2rem;

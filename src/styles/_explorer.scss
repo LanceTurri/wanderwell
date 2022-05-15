@@ -5,6 +5,7 @@
 }
 
 .explorer__header {
+  border-bottom: 1px solid var(--platform-grey-300);
   padding: 0 var(--platform-spacing-large);
 }
 
@@ -51,7 +52,6 @@
   background-color: transparent;
   border-radius: var(--platform-spacing-xsmall);
   border-bottom: 1px solid var(--platform-grey-300);
-  cursor: pointer;
   display: flex;
   flex-shrink: 0;
   overflow: hidden;
@@ -59,10 +59,6 @@
   text-overflow: ellipsis;
   transition: all var(--platform-animation-speed-base) linear;
   white-space: nowrap;
-
-  &:hover {
-    background-color: transparentize($color: #000000, $amount: 0.95);
-  }
 
   &::before {
     background-repeat: no-repeat;
@@ -75,10 +71,18 @@
     width: 2.5rem;
   }
 
-  &--folder::before {
-    background-color: var(--primary-100);
-    -webkit-mask-image: url('../images/folder_outline.svg');
-    mask-image: url('../images/folder_outline.svg');
+  &--folder {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparentize($color: #000000, $amount: 0.95);
+    }
+
+    &::before {
+      background-color: var(--primary-100);
+      -webkit-mask-image: url('../images/folder_outline.svg');
+      mask-image: url('../images/folder_outline.svg');
+    }
   }
 
   &--file::before {
@@ -104,8 +108,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 24px;
-  padding: 32px;
+  margin: var(--platform-spacing-large);
+  padding: var(--platform-spacing-xlarge);
 }
 
 .explorer__empty-title {

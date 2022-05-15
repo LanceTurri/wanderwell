@@ -100,7 +100,7 @@ const _createEmptyState = () => {
   titleElement.innerText = 'No files found!';
 
   const subtitleElement = document.createElement('p');
-  titleElement.classList.add('explorer__empty-subtitle');
+  subtitleElement.classList.add('explorer__empty-subtitle');
   subtitleElement.innerText = 'Try choosing a different folder in the sidebar.';
 
   wrappingElement.appendChild(titleElement);
