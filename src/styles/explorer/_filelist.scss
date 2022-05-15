@@ -1,0 +1,61 @@
+
+.explorer__filelist {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 0 var(--platform-spacing-large)
+}
+
+.explorer__filelist-item {
+  align-items: center;
+  background-color: transparent;
+  border-radius: var(--platform-spacing-xsmall);
+  border-bottom: 1px solid var(--platform-grey-300);
+  display: flex;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: var(--platform-spacing-base) var(--platform-spacing-small);
+  text-overflow: ellipsis;
+  transition: all var(--platform-animation-speed-base) linear;
+  white-space: nowrap;
+
+  &::before {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    margin-right: var(--platform-spacing-medium);
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  &--folder {
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparentize($color: #000000, $amount: 0.95);
+    }
+
+    &::before {
+      background-color: var(--primary-100);
+      -webkit-mask-image: url('../images/folder_outline.svg');
+      mask-image: url('../images/folder_outline.svg');
+    }
+  }
+
+  &--file::before {
+    background-color: var(--primary-100);
+    -webkit-mask-image: url('../images/file_outline.svg');
+    mask-image: url('../images/file_outline.svg');
+  }
+}
+
+.explorer__filelist-title {
+  font-size: var(--platform-text-size-large);
+}
+
+.explorer__filelist-subtitle {
+  font-size: var(--platform-text-size-small);
+  color: var(--platform-grey-500);
+}

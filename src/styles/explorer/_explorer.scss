@@ -1,0 +1,28 @@
+.explorer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.explorer__header {
+  border-bottom: 1px solid var(--platform-grey-300);
+  padding: 0 var(--platform-spacing-large);
+}
+
+.explorer__item--primary {
+  flex: 2 2 50%;
+}
+
+.explorer__item--secondary {
+  flex-shrink: 0;
+  font-size: var(--platform-text-size-small);
+  min-width: 130px;
+  text-align: right;
+  width: 15%;
+}
+
+.explorer__listing {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

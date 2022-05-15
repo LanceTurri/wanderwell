@@ -1,0 +1,12 @@
+.explorer__metadata {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  padding: var(--platform-spacing-base) var(--platform-spacing-xlarge);
+}
+
+.explorer__metadata-item {
+  color: var(--platform-grey-500);
+  font-weight: 700;
+  font-size: var(--platform-text-size-small);
+}
