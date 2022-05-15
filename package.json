@@ -21,7 +21,7 @@
     "server": "live-server",
     "start": "run-p esbuild-browser:watch server scss:watch",
     "build": "tsc -p tsconfig.json",
-    "build-all": "npm run clean && npm run build && npm run esbuild-browser",
+    "build-all": "npm run clean && npm run scss && npm run esbuild-browser:dev",
     "esbuild-browser": "esbuild src/browser.ts --bundle --minify --sourcemap=external --outfile=public/scripts/index.js",
     "esbuild-browser:dev": "esbuild src/browser.ts --bundle --outfile=public/scripts/index.js",
     "esbuild-browser:watch": "esbuild src/browser.ts --bundle --watch --outfile=public/scripts/index.js"
