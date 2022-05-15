@@ -23,6 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run build-all
 
+      - run: touch public/.nojekyll
       - name: Deploy public folder 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
